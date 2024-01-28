@@ -1,3 +1,4 @@
+// Declared Variables - Storing references to HTML elements
 const cityInput = document.getElementById("city-input");
 const searchButton = document.querySelector(".search-btn");
 const currentWeatherDiv = document.querySelector(".current-weather");
@@ -6,6 +7,7 @@ const searchedCitiesContainer = document.querySelector(".searched-cities");
 
 const API_KEY = "8f0c579d46f90c2e420c33a62f35b5db"; //API Key for OpenWeatherMap API
 
+// Create Weather Card Function
 const createWeatherCard = (cityName, weatherItem, index) => {
     if(index === 0){
         return `<div class="details">
@@ -28,7 +30,7 @@ const createWeatherCard = (cityName, weatherItem, index) => {
             </li>`;
 }
 
-
+// Fetches weather forecast data from the OpenWeather Map API based on latitude and longitude
 const getWeatherDetails = (cityName, lat, lon) => {
     const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
 
@@ -63,6 +65,9 @@ const getWeatherDetails = (cityName, lat, lon) => {
     });
 }
 
+// Get City Coordinates Function - Triggered when search button is clicked
+
+//  Fetches the coordinates using API and calls getWeatherDetails to display weather forecast
 const getCityCoordinates = (event) => {
     event.preventDefault();
 
@@ -87,8 +92,6 @@ const addToHistory = (city) => {
     cityButton.classList.add("searched-city", "clear-history-btn");
 
     cityButton.addEventListener("click", () => {
-        console.log("Clicked on searched city:", city);
-        // You can add additional logic here, e.g., display more details about the city
     });
 
     if (searchedCitiesContainer) {
@@ -97,6 +100,5 @@ const addToHistory = (city) => {
         console.error("Searched cities container not found in the DOM.");
     }
 };
-
 
 searchButton.addEventListener("click", getCityCoordinates);
