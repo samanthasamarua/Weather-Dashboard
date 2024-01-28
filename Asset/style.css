@@ -118,10 +118,16 @@
     text-align: center;
 }
 
-.current-weather .details h2,
+.current-weather .details h2 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin: 5px;
+}
+
 .current-weather .details h4 {
-    margin: 10px 0;
     font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
 }
 .current-weather .icon img {
     max-width: 120px;
@@ -152,4 +158,38 @@
     color: white;
     padding: 18px 16px;
     width: calc(100%/5);
+}
+
+.weather-cards .card img {
+    max-width: 70px;
+    margin: 5px 0 -12px 0;
+}
+
+.weather-cards .card h4 {
+    margin: 10px 0;
+}
+
+/* For screens up to 600px width */
+@media only screen and (max-width: 600px) {
+    .container {
+        flex-direction: column; /* Stack items vertically on small screens */
+        gap: 20px; /* Reduce the gap between items */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .search-history {
+        width: 100%;
+    }
+
+    .weather-data {
+        width: 100%;
+    }
+
+    .current-weather {
+        margin: 0; /* Remove the margin */
+    }
+
+    .weather-cards .card {
+        width: 100%; /* Make each card take full width on small screens */
+    }
 }
