@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="/Asset/style.css">
+</head>
+    
+<body>
+    <header class="main-header">
+        <h1> Weather Dashboard</h1>
+    </header>
+
+    <main class="container">
+        <section class="search-history">
+            <h1> Search for a City </h1>
+            <form>
+                <input id="city-input" type="text" placeholder="Enter City">
+                <button class="search-btn">Search</button>
+                <div class="divider"></div>
+                <div class="searched-cities"></div>
+                <!-- Use a different class name for the button -->
+                <button class="searched-cities clear-history-btn">Clear History</button>
+            </form>
+        </section>
+
+        <section class="weather-data">
+            <section class="current-weather">
+                <div class="details">
+                    <h2> London (2024-01-28) 
+                        <div class="icon">
+                            <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon">
+                        </div>
+                    </h2>
+                    <h4> Temp: 76.62&deg;C  </h4>
+                    <h4> Wind: 19 MPH </h4>
+                    <h4> Humidity: 19 % </h4>
+                </div>
+            </section>
+
+            <section class="days-forecast">
+                <h2> 5-Day Forecast</h2>
+                <ul class="weather-cards">
+                    <li class="card">
+                        <h3>(2024-01-28) </h3>
+                        <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon">
+                        <h4> Temp: 76.62&deg;C  </h4>
+                        <h4> Wind: 19 MPH </h4>
+                        <h4> Humidity: 19 % </h4>
+                    </li>
+                    <li class="card">
+                        <h3>(2024-01-28) </h3>
+                        <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon">
+                        <h4> Temp: 76.62&deg;C  </h4>
+                        <h4> Wind: 19 MPH </h4>
+                        <h4> Humidity: 19 % </h4>
+                    </li>
+                    <li class="card">
+                        <h3>(2024-01-28) </h3>
+                        <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon">
+                        <h4> Temp: 76.62&deg;C  </h4>
+                        <h4> Wind: 19 MPH </h4>
+                        <h4> Humidity: 19 % </h4>
+                    </li>
+                    <li class="card">
+                        <h3>(2024-01-28) </h3>
+                        <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon">
+                        <h4> Temp: 76.62&deg;C  </h4>
+                        <h4> Wind: 19 MPH </h4>
+                        <h4> Humidity: 19 % </h4>
+                    </li>
+                    <li class="card">
+                        <h3>(2024-01-28) </h3>
+                        <img src="https://openweathermap.org/img/wn/10d@2x.png" alt="weather-icon">
+                        <h4> Temp: 76.62&deg;C  </h4>
+                        <h4> Wind: 19 MPH </h4>
+                        <h4> Humidity: 19 % </h4>
+                    </li>
+                </ul>
+            </section>
+                </ul>
+            </section>
+        </section>
+    </main>
+
+    <script src="/Asset/script.js"></script>
+</body>
+</html>
